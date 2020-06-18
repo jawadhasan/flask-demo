@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Flask Starter Application</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- StyleSheets -->
+  <link rel="stylesheet" href="./lib/bootstrap.css">
+  <link rel="stylesheet" href="./lib/font-awesome.css">
+  <link rel="stylesheet" href="site.css">
+  <link rel="stylesheet" href="./stylesheets/bootstrap.pulse.min.css">
+
+
+  <!-- Libs -->
+  <script type="text/javascript" src="./lib/jquery.js"></script>
+  <script type="text/javascript" src="./lib/bootstrap.bundle.js"></script>
+
+
+</head>
+
+<body>
+
+  <div class="container-fluid" id="indexPage">  
+
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">
+        <h3 data-bind="text:pageTitle"></h3>
+      </a>
+      
+    </nav>
+
+
+    <div class="row">
+      <div class="col-md-12">
+
+        <div class="jumbotron">
+          <div data-bind="with: selectedQuote">
+            <blockquote cite="https://www.hexquote.com">
+              <h4 data-bind="text:quoteText" class="text"></h4>
+              <footer data-bind="text:'-'+quoteAuthor"></footer>
+          </blockquote>         
+          </div>  
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr class="my-4">
+        <p class="lead">
+          <button class="btn btn-primary btn-lg" data-bind="click:getRandomQuote">Next Quote</button>
+        </p>
+      </div>
+     
+    </div>
+
+    <footer>Jawad Hasan Shani | hexquote.com</footer>
+  </div>
+  <script type="text/javascript" src="./lib/knockout-latest.js"></script>
+  <script type="text/javascript" src="ajaxService.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
